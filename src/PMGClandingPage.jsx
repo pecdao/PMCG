@@ -671,7 +671,7 @@ export default function ConsultingLandingPage() {
                   {point}
                 </div>
               ))}
-              <div className="mt-2 rounded-[28px] bg-black px-8 py-7 text-white">
+              <div className="mt-2 rounded-[28px] bg-black px-9 py-8 text-white">
                 <h4 className="text-sm font-semibold uppercase tracking-[0.14em] text-stone-300">
                   Built by an operator — not an agency
                 </h4>
