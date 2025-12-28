@@ -51,53 +51,44 @@ export default function ConsultingLandingPage() {
       `}</style>
 
 
-   {/* ================= HEADER ================= */}
-<header className="sticky top-0 z-30 border-b border-white/10 bg-black text-white">
-  <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-    {/* Left: Logo */}
-    <a href="#" className="flex items-center">
-      <img
-        src="/images/STNRD-BLK.jpg"
-        alt="The STNRD GRP"
-        className="h-9 w-auto"
-      />
-    </a>
+      {/* ================= HEADER ================= */}
+      <header className="sticky top-0 z-30 border-b border-white/10 bg-black">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="flex h-20 items-center">
 
-    {/* Middle: Desktop Nav */}
-    <nav className="hidden md:flex items-center gap-12">
-      {navItems.map((item) => (
-        <a
-          key={item.id}
-          href={`#${item.id}`}
-          className="text-xs font-semibold uppercase tracking-[0.22em] text-white/60 transition hover:text-white"
-        >
-          {item.label}
-        </a>
-      ))}
-    </nav>
+            {/* LEFT: Logo */}
+            <div className="flex flex-1 justify-start">
+              <a href="/" className="flex items-center">
+                <img
+                  src="/images/STNRD-BLK.jpg"
+                  alt="The STNRD GRP"
+                  className="h-11"
+                />
+              </a>
+            </div>
 
-    {/* Right: CTA + Mobile */}
-    <div className="flex items-center gap-3">
-      <a
-        href="#book"
-        className="hidden md:inline-flex rounded-full border border-white/15 bg-white/5 px-5 py-2.5 text-xs font-semibold uppercase tracking-[0.18em] text-white/90 transition hover:bg-white/10 hover:border-white/25"
-      >
-        Book a consultation
-      </a>
+            {/* CENTER: Nav */}
+            <nav className="hidden md:flex flex-none items-center gap-16 text-xs uppercase tracking-[0.22em] text-white/70">
+              <a href="#services" className="hover:text-white transition">Services</a>
+              <a href="#approach" className="hover:text-white transition">Approach</a>
+              <a href="#case-studies" className="hover:text-white transition">Case Studies</a>
+              <a href="#about" className="hover:text-white transition">About</a>
+              <a href="#contact" className="hover:text-white transition">Contact</a>
+            </nav>
 
-      <button
-        type="button"
-        className="md:hidden inline-flex items-center justify-center rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-white/80 transition hover:bg-white/10"
-        onClick={() => setMobileOpen(true)}
-        aria-expanded={mobileOpen}
-        aria-controls="mobile-drawer"
-      >
-        Menu
-      </button>
-    </div>
-  </div>
-</header>
+            {/* RIGHT: CTA */}
+            <div className="flex flex-1 justify-end">
+              <a
+                href="#book"
+                className="rounded-full border border-white/20 px-6 py-2 text-xs uppercase tracking-[0.2em] text-white hover:border-white transition"
+              >
+                Book a Consultation
+              </a>
+            </div>
 
+          </div>
+        </div>
+      </header>
       {/* ================= MOBILE DRAWER ================= */}
       {mobileOpen && (
         <div className="fixed inset-0 z-40 md:hidden">
@@ -196,7 +187,6 @@ export default function ConsultingLandingPage() {
       )}
 
       {/* ================= HERO ================= */}
-      {/* ================= HERO ================= */}
       <section className="mx-auto max-w-7xl px-5 pb-12 pt-16 md:pb-14 md:pt-20">
         <div className="grid gap-10 md:grid-cols-2 md:items-start">
           {/* ROW 1 — LEFT: retail-interior.jpg */}
@@ -244,36 +234,36 @@ export default function ConsultingLandingPage() {
           </div>
 
           {/* ROW 2 — FULL WIDTH: LABOR / SALES / EXCELLENCE */}
-{/* ROW 2 — FULL WIDTH: LABOR / GROWTH / EXCELLENCE */}
-<div className="md:col-span-2">
-  <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
-    {[
-      ["Labor", "Right people, right hours"],
-      ["Growth", "Repeatable sales performance"],
-      ["Excellence", "Standards that scale"],
-    ].map(([title, desc]) => (
-      <div
-        key={title}
-        className="
-          group rounded-3xl bg-stone-50/60 px-23 py-3
+          {/* ROW 2 — FULL WIDTH: LABOR / GROWTH / EXCELLENCE */}
+          <div className="md:col-span-2 mt-8">
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-3">
+              {[
+                ["Labor", "Right people, right hours"],
+                ["Growth", "Repeatable sales performance"],
+                ["Excellence", "Standards that scale"],
+              ].map(([title, desc]) => (
+                <div
+                  key={title}
+                  className="
+          group rounded-3xl bg-stone-50/60 px-23 py-2
           ring-1 ring-stone-200/60
           transition-all duration-300
           hover:bg-white hover:ring-stone-300/70 hover:shadow-[0_10px_30px_-20px_rgba(0,0,0,0.25)]
         "
-      >
-        <div className="text-[11px] font-semibold uppercase tracking-[0.22em] text-stone-500">
-          {title}
-        </div>
+                >
+                  <div className="text-[11px] text-center font-semibold uppercase tracking-[0.22em] text-stone-500">
+                    {title}
+                  </div>
 
-        <div className="mt-3 h-px w-8 bg-stone-200/70" />
+                  <div className="mt-1 h-px w- bg-stone-200/70" />
 
-        <div className="mt-2 text-[15px] font-medium leading-snug text-stone-900">
-          {desc}
-        </div>
-      </div>
-    ))}
-  </div>
-</div>
+                  <div className="mt-1 text-[15px] text-center font-medium leading-snug text-stone-900">
+                    {desc}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
 
           {/* ================= WEEKLY STORE PULSE ================= */}
           <div className="rounded-[32px] border border-stone-200 bg-white p-7 shadow-sm">
@@ -293,7 +283,7 @@ export default function ConsultingLandingPage() {
             </div>
 
             {/* Metrics */}
-            <div className="mt-8 space-y-3">
+            <div className="mt-6 space-y-3">
               {[
                 "Sales vs Plan",
                 "Foot Traffic",
@@ -305,7 +295,7 @@ export default function ConsultingLandingPage() {
               ].map((metric) => (
                 <div
                   key={metric}
-                  className="flex items-center justify-between rounded-full border border-stone-200 bg-stone-50 px-5 py-4"
+                  className="flex items-center justify-between rounded-full border border-stone-200 bg-stone-50 px-5 py-6"
                 >
                   <span className="text-sm font-medium text-stone-900">
                     {metric}
@@ -380,17 +370,17 @@ export default function ConsultingLandingPage() {
             </div>
           </div>
           <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-6">
-  {[
-    "Buck Mason",
-    "Reigning Champ",
-    "Under Armour",
-    "ALDI USA",
-    "Zoomo",
-    "Jyve Corp",
-  ].map((name) => (
-    <div
-      key={name}
-      className="
+            {[
+              "Buck Mason",
+              "Reigning Champ",
+              "Under Armour",
+              "ALDI USA",
+              "Zoomo",
+              "Jyve Corp",
+            ].map((name) => (
+              <div
+                key={name}
+                className="
         flex items-center justify-center
         rounded-full
         border border-white/15
@@ -403,11 +393,11 @@ export default function ConsultingLandingPage() {
         hover:border-white/30
         hover:text-white
       "
-    >
-      {name}
-    </div>
-  ))}
-</div>
+              >
+                {name}
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -489,7 +479,7 @@ export default function ConsultingLandingPage() {
 
             <div className="mt-auto pt-6">
               <p className="text-sm font-medium text-stone-900">
-                Faster ramp, fewer misses, and earlier performance.
+                Fewer handoffs. Fewer misses. Better days.
               </p>
             </div>
           </div>
@@ -585,39 +575,39 @@ export default function ConsultingLandingPage() {
               {
                 badge: "Expansion & NSO",
                 title: "New store launches across 27+ U.S. states",
-                desc: "Led readiness planning, hiring, training, inventory setup, and operational rollout for new store openings across 27+ states and Canada, using repeatable launch playbooks that protected brand standards from day one.",
+                desc: "We’ve helped launch stores across 27+ states and Canada — aligning hiring, training, inventory, and opening-week execution through repeatable playbooks that hold brand standards from day one.",
               },
               {
                 badge: "Multi-Unit Operations",
                 title: "Scaling consistent execution across 75+ stores",
-                desc: "Built and implemented standardized operating systems, store audits, and leadership routines across a 75+ location retail footprint—supporting managers, improving consistency, and reducing operational friction as the business scaled.",
+                desc: "We’ve built and rolled out clear operating systems across a 75+ store footprint — giving managers practical routines, improving consistency, and reducing friction as the business scaled.",
               },
               {
                 badge: "Standards & Systems",
                 title: "Turning standards into daily execution",
-                desc: "Translated brand standards into practical SOPs, audits, and store-level routines that leaders could actually run—driving consistency without slowing teams down.",
+                desc: "We turn brand standards into simple, runnable systems — so keeping execution consistent without slowing teams down.",
               },
               {
                 badge: "People & Performance",
                 title: "Building teams and operating cadence at scale",
-                desc: "Hired, trained, and developed 100+ retail employees while establishing weekly operating rhythms, performance reporting, and accountability systems used by store leaders and executives.",
+                desc: "We’ve built and developed teams of 100+ retail employees by pairing strong hiring with weekly rhythms and reporting that keep leaders aligned.",
               },
               {
                 badge: "Labor & Coverage",
                 title: "Protecting margin through smarter labor models",
-                desc: "Designed labor models and coverage plans aligned to traffic, sales, and service expectations—helping stores balance performance, payroll, and customer experience.",
+                desc: "We’ve built labor models and coverage plans that flex with traffic, sales, and service needs — helping stores balance performance, payroll, and the customer experience.",
               },
               {
                 badge: "Enterprise Operations",
                 title: "Connecting stores to supply chain, systems, and partners",
-                desc: "Owned cross-functional coordination across retail, e-commerce, 3PL, facilities, and enterprise partners—ensuring store execution stayed aligned with inventory flow, logistics, and operational constraints at scale.",
+                desc: "We’ve helped stores operate in sync with the rest of the business — aligning execution with inventory, logistics, and the constraints that show up at scale.",
               },
             ].map((c) => (
               <div
                 key={c.title}
                 className="rounded-[32px] border border-stone-200 bg-stone-50 p-8"
               >
-                <div className="inline-flex rounded-full border border-stone-200 bg-white px-4 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-stone-600">
+                <div className="inline-flex rounded-full border border-stone-200 bg-white px-10 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-stone-600">
                   {c.badge}
                 </div>
                 <h3 className="mt-5 text-lg font-semibold tracking-tight">
@@ -644,10 +634,10 @@ export default function ConsultingLandingPage() {
               Operator-led consulting.
             </h2>
             <p className="mt-10 text-sm leading-relaxed text-stone-700 md:text-base">
-              I’ve spent my career running stores and scaling retail teams — opening locations, building leaders, and navigating the real trade-offs that come with growth.
-              Today, I work with retail brands to turn what actually works on the floor into simple operating systems leaders can run week after week. The focus isn’t more reporting or process —
-              it’s clear priorities, practical routines, and execution that holds as teams, locations, and expectations grow. My work sits at the intersection of performance and practicality:
-              helping teams improve results without adding noise, complexity, or friction to the day-to-day.
+              We’ve spent our careers running stores and scaling retail teams — opening locations, building leaders, and navigating the real trade-offs that come with growth. 
+              Today, we work with retail brands to turn what actually works on the floor into simple operating systems leaders can run week after week. 
+              The focus isn’t more reporting or process — it’s clear priorities, practical routines, and execution that holds as teams, locations, and expectations grow. 
+              Our work sits at the intersection of performance and practicality: helping teams improve results without adding noise, complexity, or friction to the day-to-day.
             </p>
             <div className="mt-14 overflow-hidden rounded-2xl shadow-sm">
               <img
@@ -766,16 +756,16 @@ export default function ConsultingLandingPage() {
 
       {/* ================= FOOTER ================= */}
       <footer className="bg-black py-12 text-stone-400">
-  <div className="mx-auto flex max-w-6xl flex-col gap-6 px-5 md:flex-row md:items-center md:justify-between">
-    
-    {/* Brand */}
-    <div className="flex items-center gap-4">
-      <img
-        src="/images/STNRD-BLK.jpg"
-        alt="The STNRD GRP"
-        className="h-8 w-auto"
-      />
-    </div>
+        <div className="mx-auto flex max-w-6xl flex-col gap-6 px-5 md:flex-row md:items-center md:justify-between">
+
+          {/* Brand */}
+          <div className="flex items-center gap-4">
+            <img
+              src="/images/STNRD-BLK.jpg"
+              alt="The STNRD GRP"
+              className="h-8 w-auto"
+            />
+          </div>
 
           {/* Contact */}
           <div className="text-xs text-stone-400">
