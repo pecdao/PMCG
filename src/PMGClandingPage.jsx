@@ -80,9 +80,9 @@ export default function ConsultingLandingPage() {
             <div className="flex flex-1 justify-end">
               <a
                 href="#book"
-                className="rounded-full border border-white/20 px-6 py-2 text-xs uppercase tracking-[0.2em] text-white hover:border-white transition"
+                className="ml-6 md:ml-6 rounded-full border border-white/20 px-5 md:px-8 py-3.5 text-[10px] md:text-xs leading-1 uppercase tracking-[0.02em] text-white transition hover:border-white"
               >
-                Book a Consultation
+                  Book a Consultation
               </a>
             </div>
 
@@ -773,7 +773,7 @@ export default function ConsultingLandingPage() {
               href="mailto:pmecgroupllc@gmail.com"
               className="text-white/80 underline-offset-4 hover:underline"
             >
-              pmecgroupllc@gmail.com
+              thestandardgc@gmail.com
             </a>
           </div>
 
