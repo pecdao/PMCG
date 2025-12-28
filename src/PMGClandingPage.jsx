@@ -671,7 +671,7 @@ export default function ConsultingLandingPage() {
                   {point}
                 </div>
               ))}
-              <div className="mt-2 rounded-[28px] bg-black px-9 py-8 text-white">
+              <div className="mt-2 rounded-[28px] bg-stone-900 px-9 py-8 text-white">
                 <h4 className="text-sm font-semibold uppercase tracking-[0.14em] text-stone-300">
                   Built by an operator — not an agency
                 </h4>
@@ -704,22 +704,22 @@ export default function ConsultingLandingPage() {
                 grows.
               </p>
 
-              <ul className="mt-8 space-y-2 text-sm text-white/70">
+              <ul className="mt-10 space-y-2 text-s text-white/70">
                 <li>— 30–45 minute call</li>
                 <li>— Action plan recap</li>
                 <li>— Optional follow-up sprint</li>
               </ul>
               {/* Supporting image */}
-              <div className="mt-10 overflow-hidden rounded-2xl shadow-lg bg-black/20">
+              <div className="mt-14 overflow-hidden rounded-2xl shadow-lg bg-black/20">
                 <img
                   src="/images/mens-retail-workspace.jpg"
                   alt="Men’s retail workspace with apparel and planning tools"
-                  className="block h-[260px] w-full object-cover md:h-[320px]"
+                  className="block h-[260px] w-full object-cover md:h-[340px]"
                   loading="lazy"
                 />
               </div>
-              <div className="mt-8 rounded-3xl border border-white/10 bg-white/5 p-6">
-                <div className="mt-2 text-base text-white/80">
+              <div className="mt-10 rounded-3xl border border-white/10 bg-white/5 p-6">
+                <div className="mt-2 text-base text-s text-center text-white/80">
                   Let’s get started with an operations scan.
                   Pick a time that works for you.
                 </div>
