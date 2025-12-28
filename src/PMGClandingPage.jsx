@@ -80,9 +80,18 @@ export default function ConsultingLandingPage() {
             <div className="flex flex-1 justify-end">
               <a
                 href="#book"
-                className="ml-6 md:ml-6 rounded-full border border-white/20 px-5 md:px-8 py-3.5 text-[10px] md:text-xs leading-[1] uppercase tracking-[0.2em] text-white transition hover:border-white"
+                className="
+      ml-6
+      rounded-full border border-white/20
+      px-5 md:px-8 py-3.5
+      whitespace-nowrap shrink-0
+      leading-none
+      uppercase tracking-[0.2em]
+      text-white transition hover:border-white
+      text-[clamp(0.62rem,2.6vw,0.75rem)]
+    "
               >
-                  Book a Consultation
+                Book a Consultation
               </a>
             </div>
 
@@ -90,93 +99,93 @@ export default function ConsultingLandingPage() {
         </div>
       </header>
       {/* ================= MOBILE DRAWER ================= */}
-{mobileOpen && (
-  <div className="fixed inset-0 z-40 md:hidden">
-    {/* Overlay */}
-    <button
-      type="button"
-      className="absolute inset-0 bg-black/60"
-      onClick={() => setMobileOpen(false)}
-      aria-label="Close menu overlay"
-    />
-
-    {/* Drawer panel */}
-    <div
-      id="mobile-drawer"
-      className="absolute right-0 top-0 h-full w-[88%] max-w-sm translate-x-0 border-l border-white/10 bg-stone-950 text-white transition-transform duration-300 ease-out"
-      role="dialog"
-      aria-modal="true"
-    >
-      <div className="flex h-full flex-col">
-        {/* Top bar */}
-        <div className="flex items-start justify-between border-b border-white/10 px-6 py-6">
-          <div className="flex items-center gap-3">
-            <div className="grid h-10 w-10 place-items-center rounded-2xl bg-white/10">
-              <span className="text-lg">🛍️</span>
-            </div>
-            <div className="leading-tight">
-              <div className="text-xs font-semibold tracking-[0.18em] uppercase text-white/80">
-                Retail Ops
-              </div>
-              <div className="text-xs text-white/50">Menu</div>
-            </div>
-          </div>
-
+      {mobileOpen && (
+        <div className="fixed inset-0 z-40 md:hidden">
+          {/* Overlay */}
           <button
             type="button"
+            className="absolute inset-0 bg-black/60"
             onClick={() => setMobileOpen(false)}
-            className="shrink-0 mt-1 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-white/80 transition hover:bg-white/10"
+            aria-label="Close menu overlay"
+          />
+
+          {/* Drawer panel */}
+          <div
+            id="mobile-drawer"
+            className="absolute right-0 top-0 h-full w-[88%] max-w-sm translate-x-0 border-l border-white/10 bg-stone-950 text-white transition-transform duration-300 ease-out"
+            role="dialog"
+            aria-modal="true"
           >
-            Close
-          </button>
-        </div>
+            <div className="flex h-full flex-col">
+              {/* Top bar */}
+              <div className="flex items-start justify-between border-b border-white/10 px-6 py-6">
+                <div className="flex items-center gap-3">
+                  <div className="grid h-10 w-10 place-items-center rounded-2xl bg-white/10">
+                    <span className="text-lg">🛍️</span>
+                  </div>
+                  <div className="leading-tight">
+                    <div className="text-xs font-semibold tracking-[0.18em] uppercase text-white/80">
+                      Retail Ops
+                    </div>
+                    <div className="text-xs text-white/50">Menu</div>
+                  </div>
+                </div>
 
-        {/* Links */}
-        <div className="flex-1 overflow-y-auto px-6 py-8">
-          <div className="text-[11px] font-semibold tracking-[0.18em] uppercase text-white/50">
-            Navigation
-          </div>
+                <button
+                  type="button"
+                  onClick={() => setMobileOpen(false)}
+                  className="shrink-0 mt-1 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-white/80 transition hover:bg-white/10"
+                >
+                  Close
+                </button>
+              </div>
 
-          <div className="mt-5 flex flex-col">
-            {navItems.map((item) => (
-              <a
-                key={item.id}
-                href={`#${item.id}`}
-                onClick={() => setMobileOpen(false)}
-                className="group flex items-center justify-between border-b border-white/10 py-5"
-              >
-                <span className="text-sm font-semibold tracking-[0.12em] uppercase text-white/85 transition group-hover:text-white">
-                  {item.label}
-                </span>
-                <span className="text-white/40 transition group-hover:text-white/70">
-                  →
-                </span>
-              </a>
-            ))}
-          </div>
+              {/* Links */}
+              <div className="flex-1 overflow-y-auto px-6 py-8">
+                <div className="text-[11px] font-semibold tracking-[0.18em] uppercase text-white/50">
+                  Navigation
+                </div>
 
-          {/* CTA */}
-          <div className="mt-8">
-            <a
-              href="#book"
-              onClick={() => setMobileOpen(false)}
-              className="block w-full rounded-full bg-white px-6 py-4 text-center text-xs font-semibold uppercase tracking-[0.16em] text-stone-950 transition hover:bg-stone-100"
-            >
-              Book a consultation
-            </a>
+                <div className="mt-5 flex flex-col">
+                  {navItems.map((item) => (
+                    <a
+                      key={item.id}
+                      href={`#${item.id}`}
+                      onClick={() => setMobileOpen(false)}
+                      className="group flex items-center justify-between border-b border-white/10 py-5"
+                    >
+                      <span className="text-sm font-semibold tracking-[0.12em] uppercase text-white/85 transition group-hover:text-white">
+                        {item.label}
+                      </span>
+                      <span className="text-white/40 transition group-hover:text-white/70">
+                        →
+                      </span>
+                    </a>
+                  ))}
+                </div>
 
-            <p className="mt-4 text-xs leading-relaxed text-white/50">
-              Clean ops. Better outcomes. Keep it consistent across every location.
-            </p>
-          </div>
+                {/* CTA */}
+                <div className="mt-8">
+                  <a
+                    href="#book"
+                    onClick={() => setMobileOpen(false)}
+                    className="block w-full rounded-full bg-white px-6 py-4 text-center text-xs font-semibold uppercase tracking-[0.16em] text-stone-950 transition hover:bg-stone-100"
+                  >
+                    Book a consultation
+                  </a>
 
-          {/* ✅ Brand grid (NOW inside the drawer) */}
-          <div className="mt-8 flex justify-center">
-          <div className="grid w-full max-w-[420px] grid-cols-2 gap-x-4 gap-y-5">
-    {["Brand A", "Brand B", "Brand C", "Brand D"].map((brand) => (
-      <div
-        key={brand}
-        className="
+                  <p className="mt-4 text-xs leading-relaxed text-white/50">
+                    Clean ops. Better outcomes. Keep it consistent across every location.
+                  </p>
+                </div>
+
+                {/* ✅ Brand grid (NOW inside the drawer) */}
+                <div className="mt-8 flex justify-center">
+                  <div className="grid w-full max-w-[420px] grid-cols-2 gap-x-4 gap-y-5">
+                    {["Brand A", "Brand B", "Brand C", "Brand D"].map((brand) => (
+                      <div
+                        key={brand}
+                        className="
           w-full
           min-h-[56px]
           flex items-center justify-center
@@ -191,24 +200,24 @@ export default function ConsultingLandingPage() {
           text-white/80
           text-center
         "
-      >
-        {brand}
-      </div>
-    ))}
-  </div>
-</div>
-</div>
-        {/* Bottom strip */}
-        <div className="border-t border-white/10 px-6 py-5">
-          <div className="flex items-center justify-between text-[11px] text-white/45">
-            <span className="tracking-[0.14em] uppercase">Retail Ops Consulting</span>
-            <span>© {new Date().getFullYear()}</span>
+                      >
+                        {brand}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+              {/* Bottom strip */}
+              <div className="border-t border-white/10 px-6 py-5">
+                <div className="flex items-center justify-between text-[11px] text-white/45">
+                  <span className="tracking-[0.14em] uppercase">Retail Ops Consulting</span>
+                  <span>© {new Date().getFullYear()}</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-)}
+      )}
 
       {/* ================= HERO ================= */}
       <section className="mx-auto max-w-7xl px-5 pb-12 pt-16 md:pb-14 md:pt-20">
@@ -394,17 +403,17 @@ export default function ConsultingLandingPage() {
             </div>
           </div>
           <div className="mx-auto grid w-full max-w-[560px] grid-cols-2 gap-x-4 gap-y-5 sm:max-w-none sm:grid-cols-3 sm:gap-3 md:grid-cols-6 md:gap-2">
-  {[
-    "Buck Mason",
-    "Reigning Champ",
-    "Under Armour",
-    "ALDI USA",
-    "Zoomo",
-    "Jyve Corp",
-  ].map((name) => (
-    <div
-      key={name}
-      className="
+            {[
+              "Buck Mason",
+              "Reigning Champ",
+              "Under Armour",
+              "ALDI USA",
+              "Zoomo",
+              "Jyve Corp",
+            ].map((name) => (
+              <div
+                key={name}
+                className="
         w-full min-h-[64px]
         flex items-center justify-center
         rounded-full
@@ -422,12 +431,12 @@ export default function ConsultingLandingPage() {
         hover:border-white/30
         hover:text-white
       "
-    >
-      {name}
-    </div>
-  ))}
-</div>
-</div>
+              >
+                {name}
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* ================= SERVICES ================= */}
@@ -600,45 +609,45 @@ export default function ConsultingLandingPage() {
           </div>
 
           <div className="mt-10 grid gap-6 md:grid-cols-3">
-  {[
-    {
-      badge: "Expansion & NSO",
-      title: "New store launches across 27+ U.S. states",
-      desc: "We’ve helped launch stores across 27+ states and Canada — aligning hiring, training, inventory, and opening-week execution through repeatable playbooks that hold brand standards from day one.",
-    },
-    {
-      badge: "Multi-Unit Operations",
-      title: "Scaling consistent execution across 75+ stores",
-      desc: "We’ve built and rolled out clear operating systems across a 75+ store footprint — giving managers practical routines, improving consistency, and reducing friction as the business scaled.",
-    },
-    {
-      badge: "Standards & Systems",
-      title: "Turning standards into daily execution",
-      desc: "We turn brand standards into simple, runnable systems — so keeping execution consistent without slowing teams down.",
-    },
-    {
-      badge: "People & Performance",
-      title: "Building teams and operating cadence at scale",
-      desc: "We’ve built and developed teams of 100+ retail employees by pairing strong hiring with weekly rhythms and reporting that keep leaders aligned.",
-    },
-    {
-      badge: "Labor & Coverage",
-      title: "Protecting margin through smarter labor models",
-      desc: "We’ve built labor models and coverage plans that flex with traffic, sales, and service needs — helping stores balance performance, payroll, and the customer experience.",
-    },
-    {
-      badge: "Enterprise Operations",
-      title: "Connecting stores to supply chain, systems, and partners",
-      desc: "We’ve helped stores operate in sync with the rest of the business — aligning execution with inventory, logistics, and the constraints that show up at scale.",
-    },
-  ].map((c) => (
-    <div
-      key={c.title}
-      className="rounded-[32px] border border-stone-200 bg-stone-50 p-8"
-    >
-      {/* ✅ Responsive Badge */}
-      <div
-        className="
+            {[
+              {
+                badge: "Expansion & NSO",
+                title: "New store launches across 27+ U.S. states",
+                desc: "We’ve helped launch stores across 27+ states and Canada — aligning hiring, training, inventory, and opening-week execution through repeatable playbooks that hold brand standards from day one.",
+              },
+              {
+                badge: "Multi-Unit Operations",
+                title: "Scaling consistent execution across 75+ stores",
+                desc: "We’ve built and rolled out clear operating systems across a 75+ store footprint — giving managers practical routines, improving consistency, and reducing friction as the business scaled.",
+              },
+              {
+                badge: "Standards & Systems",
+                title: "Turning standards into daily execution",
+                desc: "We turn brand standards into simple, runnable systems — so keeping execution consistent without slowing teams down.",
+              },
+              {
+                badge: "People & Performance",
+                title: "Building teams and operating cadence at scale",
+                desc: "We’ve built and developed teams of 100+ retail employees by pairing strong hiring with weekly rhythms and reporting that keep leaders aligned.",
+              },
+              {
+                badge: "Labor & Coverage",
+                title: "Protecting margin through smarter labor models",
+                desc: "We’ve built labor models and coverage plans that flex with traffic, sales, and service needs — helping stores balance performance, payroll, and the customer experience.",
+              },
+              {
+                badge: "Enterprise Operations",
+                title: "Connecting stores to supply chain, systems, and partners",
+                desc: "We’ve helped stores operate in sync with the rest of the business — aligning execution with inventory, logistics, and the constraints that show up at scale.",
+              },
+            ].map((c) => (
+              <div
+                key={c.title}
+                className="rounded-[32px] border border-stone-200 bg-stone-50 p-8"
+              >
+                {/* ✅ Responsive Badge */}
+                <div
+                  className="
           inline-flex items-center justify-center
           w-full max-w-[18rem]
           px-4 sm:px-6
@@ -655,21 +664,21 @@ export default function ConsultingLandingPage() {
           text-center
           whitespace-nowrap
         "
-      >
-        {c.badge}
-      </div>
+                >
+                  {c.badge}
+                </div>
 
-      <h3 className="mt-5 text-lg font-semibold tracking-tight">
-        {c.title}
-      </h3>
+                <h3 className="mt-5 text-lg font-semibold tracking-tight">
+                  {c.title}
+                </h3>
 
-      <p className="mt-3 text-sm leading-relaxed text-stone-700">
-        {c.desc}
-      </p>
-    </div>
-  ))}
-</div>
-</div>
+                <p className="mt-3 text-sm leading-relaxed text-stone-700">
+                  {c.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
       {/* ================= ABOUT ================= */}
@@ -684,9 +693,9 @@ export default function ConsultingLandingPage() {
               Operator-led consulting.
             </h2>
             <p className="mt-10 text-sm leading-relaxed text-stone-700 md:text-base">
-              We’ve spent our careers running stores and scaling retail teams — opening locations, building leaders, and navigating the real trade-offs that come with growth. 
-              Today, we work with retail brands to turn what actually works on the floor into simple operating systems leaders can run week after week. 
-              The focus isn’t more reporting or process — it’s clear priorities, practical routines, and execution that holds as teams, locations, and expectations grow. 
+              We’ve spent our careers running stores and scaling retail teams — opening locations, building leaders, and navigating the real trade-offs that come with growth.
+              Today, we work with retail brands to turn what actually works on the floor into simple operating systems leaders can run week after week.
+              The focus isn’t more reporting or process — it’s clear priorities, practical routines, and execution that holds as teams, locations, and expectations grow.
               Our work sits at the intersection of performance and practicality: helping teams improve results without adding noise, complexity, or friction to the day-to-day.
             </p>
             <div className="mt-14 overflow-hidden rounded-2xl shadow-sm">
