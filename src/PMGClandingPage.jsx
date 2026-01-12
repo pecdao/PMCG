@@ -814,34 +814,35 @@ export default function ConsultingLandingPage() {
       </section>
 
       {/* ================= FOOTER ================= */}
-      <footer className="bg-black py-12 text-stone-400">
-        <div className="mx-auto flex max-w-6xl flex-col gap-6 px-5 md:flex-row md:items-center md:justify-between">
+<footer className="bg-black py-8 text-stone-400">
+  <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-5">
 
-          {/* Brand */}
-          <div className="flex items-center gap-4">
-            <img
-              src="/images/STNRD-BLK.jpg"
-              alt="The STNRD GRP"
-              className="h-8 w-auto"
-            />
-          </div>
+    {/* Brand */}
+    <div className="flex items-center gap-3">
+      <img
+        src="/images/STNRD-BLK.jpg"
+        alt="The STNRD GRP"
+        className="h-7 w-auto"
+      />
+    </div>
 
-          {/* Contact */}
-          <div className="text-xs text-stone-400">
-            <a
-              href="mailto:pmecgroupllc@gmail.com"
-              className="text-white/80 underline-offset-4 hover:underline"
-            >
-              thestandardgc@gmail.com
-            </a>
-          </div>
+    {/* Contact */}
+    <div className="text-[11px] sm:text-xs">
+      <a
+        href="mailto:pmecgroupllc@gmail.com"
+        className="text-white/80 underline-offset-4 hover:underline"
+      >
+        thestandardgc@gmail.com
+      </a>
+    </div>
 
-          {/* Copyright */}
-          <div className="text-xs">
-            © {new Date().getFullYear()} MoBrewsLLC. All rights reserved.
-          </div>
-        </div>
-      </footer>
+    {/* Copyright */}
+    <div className="text-[11px] sm:text-xs whitespace-nowrap">
+      © {new Date().getFullYear()} MoBrewsLLC
+    </div>
+
+  </div>
+</footer>
     </div>
   );
 }
